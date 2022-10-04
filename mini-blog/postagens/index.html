@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="blogMax">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="Luciano" content="" />
+  <title>Blog - Wesk</title>
+
+  <link href="https://getbootstrap.com/docs/5.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Favicon-->
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+  <!-- Core theme CSS (includes Bootstrap)-->
+  <link href="css/styles.css" rel="stylesheet" />
+  <!-- Angularjs-->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+  <script type="text/javascript" src="/js/scripts.js"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#!">netó!</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
+          class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#!">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link" href="#!">Contato</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="album py-5 bg-light">
+    <div class="container">
+      <div class="row" ng-controller="RestMax">
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <img ng-src="https://api-fake-blog.herokuapp.com{{ publicacoes.thumbImage }}">
+            <div class="card-body">
+              <p class="card-text">{{ publicacoes.title }}</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <small class="text-muted">{{ publicacoes.description }}</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="py-5 bg-dark">
+    <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Neto-Luciano 2022</p></div>
+</footer>
+</body>
+
+</html>
